@@ -36,29 +36,42 @@ for(let i = 0; i < 5;i++){
     one = one.toLocaleLowerCase();
     two = two.toLocaleLowerCase();
 
-    if(one == "rock" && two == "paper"){
+
+
+    
+    if(one == two){
+        alert("Draw!!! No one gets points lol");
+    }
+    else if(one == "rock" && two == "paper"){
         two_score++;
+        alert("Yay you win!!!");
+
     }
     else if(one == "rock" && two == "scissors"){
         one_score++;
+        alert("You lose. Better luck next time:(");
     }
     else if(one == "paper" && two == "rock"){
         one_score++;
+        alert("You lose. Better luck next time:(");
 
     }
 
     else if(one == "paper" && two == "scissors"){
         two_score++;
+        alert("Yay you win!!!");
     }
 
     else if(one == "scissors" && two == "rock"){
         two_score++;
+        alert("Yay you win!!!");
     }
 
     else if(one == "scissors" && two == "paper"){
         one_score++;
+        alert("You lose. Better luck next time:(");
     }
 
 }
 
-console.log(one_score + " " + two_score);
+console.log("Computer score: " + one_score + "Your Score: " + two_score);
